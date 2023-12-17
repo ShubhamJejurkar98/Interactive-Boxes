@@ -1,6 +1,6 @@
 function toggleOptions(boxId) {
-    var box = document.getElementById(boxId);
-    var options = document.getElementById(boxId + 'Options');
+    let box = document.getElementById(boxId);
+    let options = document.getElementById(boxId + 'Options');
     
     if (box.classList.contains('expanded')) {
         box.classList.remove('expanded');
@@ -12,18 +12,18 @@ function toggleOptions(boxId) {
 }
 
 function changeColor(boxId, color) {
-    var box = document.getElementById(boxId);
+    let box = document.getElementById(boxId);
     box.style.backgroundColor = color;
 }
 
 // function changeSize(boxId, size) {
-//     var box = document.getElementById(boxId);
+//     const box = document.getElementById(boxId);
 //     box.style.height = size === 'small' ? '100px' : size === 'medium' ? '150px' : '200px';
 // }
 
 // Stopping click event propagation on options
-document.querySelectorAll('.options').forEach(function (option) {
-    option.addEventListener('click', function (event) {
+document.querySelectorAll('.options').forEach(option => {
+    option.addEventListener('click', event => {
         event.stopPropagation();
     });
 });
